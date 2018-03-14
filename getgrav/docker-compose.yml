@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  nginx:
+    container_name: getgrav_nginx
+    volumes:
+      - "${APP_PATH}:/var/www:ro"
+    build:
+      context: .
+      dockerfile: dockerfiles/getgrav_nginx
+    labels:
+      - "traefik.host=travel_dronneau_fr"
+      - "traefik.backend=travel_dronneau_fr"
+      - "traefik.frontend.rule=Host:travel.dronneau.fr"
+      - "traefik.port=80"
+      - "traefik.enable=true"
+      - "traefik.frontend.passHostHeader=true"
+  php:
+    container_name: getgrav_php7
+    volumes:
+      - "${APP_PATH}:/var/www"
+    build:
+      context: .
+      dockerfile: dockerfiles/getgrav_php7
+    labels:
+      - "traefik.enable=false"

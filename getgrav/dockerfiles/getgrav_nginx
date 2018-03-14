@@ -1,0 +1,5 @@
+FROM nginx:latest
+
+LABEL maintainer="basti1.dr@hgmail.com"
+
+COPY files/nginx/nginx.conf /etc/nginx/conf.d/default.conf
