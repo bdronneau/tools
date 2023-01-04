@@ -1,5 +1,7 @@
 # Eventrouter
 
+![Docker Pulls](https://img.shields.io/docker/pulls/bdronneau/eventrouter?style=for-the-badge)
+
 Build a public image of [eventrouter](https://github.com/openshift/eventrouter) located at [bdronneau/eventrouter](https://hub.docker.com/r/bdronneau/eventrouter).
 
 
