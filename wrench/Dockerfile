@@ -1,3 +1,3 @@
-FROM alpine:3.18.2
+FROM alpine:3.18.3
 
 RUN apk add --no-cache bind-tools gpg git vim jq yq curlie tmux mtr mc
