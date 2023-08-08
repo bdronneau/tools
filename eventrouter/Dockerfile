@@ -1,4 +1,4 @@
-FROM golang:1.20-alpine as builder
+FROM golang:1.21-alpine as builder
 ARG GIT_BRANCH
 WORKDIR /go/src/github.com/openshift/
 RUN apk update && apk add \
